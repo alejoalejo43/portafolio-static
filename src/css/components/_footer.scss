@@ -1,0 +1,83 @@
+.footer {
+  background-color: $color-primary-blue;
+  display: grid;
+  grid-template-columns: 5% repeat(2, 25%) 40% 5%;
+
+  &__logo {
+    grid-column: 2 / 3;
+    width: 50%;
+    align-self: center;
+    padding: 5px;
+  }
+  &____menu {
+    grid-column: 3/4;
+  }
+  &__social {
+    grid-column: 4 / 5;
+  }
+  &__copy {
+    grid-column: 1 / 5;
+    color: $color-blue-light;
+    text-align: center;
+    font-size: 1vw;
+    font-family: $font-family;
+  }
+  &__mapa {
+    font-family: $font-family;
+    text-transform: uppercase;
+    color: $color-primary-graylight;
+    margin-bottom: 2rem;
+    font-size: 1.3vw;
+  }
+  &__menu {
+    margin: 4rem;
+    h3 {
+      text-align: left;
+      font-size: 1.7rem;
+    }
+    &--list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-family;
+        transition: color 0.5s cubic-bezier(0, 0.48, 0.24, 0.82);
+        font-size: 12px;
+        line-height: 20px;
+        &:hover {
+          color: $color-secundary;
+        }
+      }
+    }
+  }
+  &__social {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__social--icon {
+    color: $color-primary-blue;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem;
+    margin: 0.7rem;
+    cursor: pointer;
+    border: none;
+    &--face {
+      padding: 0.5rem 1rem;
+    }
+    &:hover {
+      background-color: $color-primary-graylight;
+    }
+    a {
+      text-decoration: none;
+      color: $color-blue-dark;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+.title {
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-family: $font-principal, Times, serif;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+.title-red {
+  color: $color-secundary;
+}
+.paragraph {
+  font-family: $font-family;
+  color: #ffffff;
+  font-size: 1.8vw;
+  font-weight: 100;
+  line-height: 3vw;
+}
+
+.subtitle {
+  font-family: $font-family;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: 100;
+}

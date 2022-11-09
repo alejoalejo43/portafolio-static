@@ -1,0 +1,445 @@
+@media screen and (max-width: 768px) {
+  .header {
+    .title {
+      font-size: 9vw;
+      transform: translateY(5rem);
+    }
+    .button {
+      grid-column: col-start 2 / col-end 9;
+      letter-spacing: 0.1rem;
+      font-size: 3.5vw;
+      padding: 2rem 4rem;
+    }
+  }
+
+  .nav {
+    grid-column: col-start 1 / col-end 12;
+    .nav__button {
+      display: block;
+      justify-self: right;
+      margin-top: 8px;
+      z-index: 2;
+
+      .nav__icon {
+        animation: closedMid 0.8s backwards;
+        animation-direction: reverse;
+
+        &::before {
+          animation: closedTop 0.8s backwards;
+          animation-direction: reverse;
+        }
+
+        &::after {
+          animation: closedBtm 0.8s backwards;
+          animation-direction: reverse;
+        }
+      }
+    }
+
+    &__container {
+      .menu {
+        position: absolute;
+        top: -20px;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        li {
+          a {
+            font-size: 2rem;
+            margin-left: 20px;
+          }
+        }
+
+        background-color: $color-primary-blue;
+        transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+
+        clip-path: circle(200px at top right);
+        .nav-link {
+          opacity: 0;
+          transform: translateX(-100%);
+          text-align: center;
+
+          a {
+            display: block;
+            padding: 2rem;
+          }
+        }
+      }
+    }
+    &__checkbox:checked ~ .menu {
+      opacity: 1;
+      clip-path: circle(100% at center);
+
+      .nav-link {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.4s ease-in-out,
+          transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:nth-of-type(1) {
+          transition-delay: 0.6s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 0.7s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 0.8s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 0.9s;
+        }
+        &:nth-of-type(5) {
+          transition-delay: 1s;
+        }
+      }
+    }
+    &__checkbox:checked ~ &__button {
+      border-radius: 50%;
+      animation: pulse 1s;
+      .nav__icon {
+        background-color: $color-red;
+        animation: openMid 0.8s forwards;
+
+        &::before {
+          background-color: $color-red;
+          animation: openTop 0.8s forwards;
+        }
+        &::after {
+          background-color: $color-red;
+          animation: openBtm 0.8s forwards;
+        }
+      }
+    }
+  }
+
+  .proyects__container {
+    flex-wrap: wrap;
+  }
+
+  .proyects__box {
+    padding-bottom: 6rem;
+    width: 80vw;
+    &--front,
+    &--back {
+      width: 80vw;
+      height: 100vw;
+    }
+  }
+
+  .proyects {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    row-gap: 2vw;
+    &__title {
+      font-size: 8vw;
+    }
+    &__box {
+      grid-column: 1/4;
+      width: 80vw;
+      height: 100vw;
+    }
+  }
+
+  .card {
+    &__text {
+      font-size: 9vw;
+    }
+
+    &__paragraph {
+      font-size: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .button {
+    &__small {
+      font-size: 3vw;
+      margin-top: 2rem;
+    }
+    &__large {
+      letter-spacing: 0.1rem;
+      font-size: 3vw;
+      padding: 2rem 2.5rem;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .footer {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      width: 20vw;
+    }
+    &__menu {
+      margin: 4rem;
+      h3 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+      &--list {
+        flex-direction: row;
+        padding-left: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .footer__item {
+          padding-bottom: 20px;
+          a {
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    &__copy {
+      font-size: 17px;
+    }
+  }
+
+  .brochure {
+    &__index {
+      &--container {
+        p {
+          font-size: 3rem;
+          padding-bottom: 2rem;
+        }
+        .button__small--brochure {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .dedication {
+    &__subtitle {
+      padding: 5vw 0;
+      font-size: 3.8rem;
+    }
+    &__paragraph {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+    }
+  }
+
+  .brochure {
+    &__heading {
+      font-size: 3.8rem;
+      text-align: center;
+    }
+  }
+
+  .city {
+    &__subtitle {
+      font-size: 6vw;
+    }
+    &__paragraph {
+      font-size: 2.5vw;
+      line-height: 3vw;
+    }
+  }
+  .pictures {
+    &__index {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .activity {
+    &__frame {
+      &--1 {
+        flex-direction: column;
+      }
+      &--2 {
+        flex-direction: column;
+      }
+    }
+    &__paragraph {
+      font-size: 3.5vw;
+      margin: 8vw;
+      line-height: 4vw;
+      &--1 {
+        text-align: justify;
+        padding: 0;
+      }
+      &--2 {
+        text-align: justify;
+        padding-right: 0;
+      }
+    }
+    &__picture {
+      width: 60vw;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .motivation {
+    &__picture {
+      grid-column: 1 / 3;
+      &--container {
+        width: 70vw;
+        padding-top: 5vw;
+        transform: translateX(-3vw);
+
+        img {
+          width: 70vw;
+        }
+      }
+      &--square {
+        width: 70vw;
+        height: 100vw;
+        border: 2px solid $color-secundary;
+        transform: translate(5vw, 6vw);
+      }
+    }
+    &__content {
+      grid-column: 1 / 3;
+      padding-top: 50px;
+      &--container {
+        width: 80vw;
+        .title {
+          font-size: 14vw;
+          text-align: center;
+        }
+        .paragraph {
+          font-size: 15px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .subtitle {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      background-color: $color-primary-blue;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .pictures {
+    &__index {
+      grid-template-columns: 1fr;
+      &--2 {
+        grid-column: span 1;
+      }
+      &--1 {
+        grid-row: span 2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) and (orientation: landscape) {
+  .header {
+    height: 120vh;
+    .title {
+      margin-top: 0;
+    }
+    button {
+      margin-top: 50vh;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    &__logo {
+      grid-column: 1 / 2;
+      width: 50%;
+      align-self: center;
+      padding: 0;
+    }
+    &__menu {
+      grid-column: 2/3;
+      margin: 0;
+      h3 {
+        text-align: left;
+        font-size: 2vw;
+      }
+      &--list {
+        justify-content: flex-start;
+
+        a {
+          font-size: 12px;
+          line-height: 30px;
+        }
+      }
+    }
+    &__social {
+      grid-column: 3 / 4;
+      &--icon {
+        font-size: 3vw;
+      }
+    }
+    &__copy {
+      font-size: 2.3vw;
+    }
+  }
+  /*   .proyects {
+    row-gap: 1vw;
+    &__container {
+      height: 100vh;
+    }
+    &__title {
+      font-size: 6vw;
+    }
+    &__box {
+      padding: 0;
+      width: 28vw;
+      &--front,
+      &--back {
+        width: 28vw;
+        height: 35vw;
+      }
+
+      &--1 {
+        grid-column: 1/2;
+      }
+      &--2 {
+        grid-column: 2/3;
+      }
+      &--3 {
+        grid-column: 3/4;
+      }
+    }
+  }
+
+  .card {
+    &__text {
+      font-size: 4vw;
+      padding-top: 3vw;
+    }
+
+    &__paragraph {
+      font-size: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  .button {
+    &__small {
+      font-size: 2vw;
+      margin-top: 1rem;
+    }
+  } */
+}

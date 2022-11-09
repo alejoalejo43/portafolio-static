@@ -1,0 +1,1 @@
+funciona la parte de renderizar el brochure, toco preguntar si el dom ya estaba listo

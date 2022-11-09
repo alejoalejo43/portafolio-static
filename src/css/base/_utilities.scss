@@ -1,0 +1,27 @@
+.button {
+  border-radius: 5em;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: $font-family;
+  }
+  &__red {
+    background-color: $color-secundary;
+    border: none;
+  }
+  &__clear {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+  &__small {
+    font-size: 1.1vw;
+    padding: 0.5rem 0.7rem;
+  }
+  &__large {
+    letter-spacing: 0.1rem;
+    font-size: 1.7vw;
+    padding: 2rem 2.5rem;
+  }
+}
